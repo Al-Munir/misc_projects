@@ -8,8 +8,9 @@ qr = qrcode.QRCode(
 )
 
 request = input('Enter the link you wish to generate: ')
+file = input('Enter the file save name: ')
 
 qr.add_data(request)
 
 img = qr.make_image()
-img.save('qrcode.png')
+img.save(f"{file}.png")
